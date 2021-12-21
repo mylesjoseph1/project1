@@ -108,16 +108,16 @@ window.onload = function init() {
     up = vec3(0.1, 1.0, 0.0);
     eye = vec3(-0.9, -1.0, 1.0);
 
-    //How far awaythe shadow cube is
+    //NEW
     transMatrix = translate(cubeX, cubeY, cubeZ);
     transMatrixLoc = gl.getUniformLocation(program, "transMatrix");
     gl.uniformMatrix4fv(transMatrixLoc, false, flatten(transMatrix));
 
-    //Creatig LOC variables 
+    //LOC variables 
     modelViewMatrixLoc = gl.getUniformLocation(program, "modelViewMatrix");
     projectionMatrixLoc = gl.getUniformLocation(program, "projectionMatrix");
 
-    //Sets projection mode to orthohtaphic
+   
     projectionMatrix = ortho(left, right, bottom, ytop, near, far);
     gl.uniformMatrix4fv(projectionMatrixLoc, false, flatten(projectionMatrix));
 
@@ -138,7 +138,7 @@ window.onload = function init() {
             axis = zAxis;
         };
     
-
+//END NEW
     render();
 }
 
