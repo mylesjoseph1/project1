@@ -1,3 +1,5 @@
+//Put the light source at postion (-4,4,0) and move the cube to position (0.7,0.7,0.0) and capture the shadow that falls on the x-z plane.
+
 "use strict";
 
 /*
